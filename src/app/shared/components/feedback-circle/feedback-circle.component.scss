@@ -1,8 +1,16 @@
+:host {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
 .support_feedback_circle {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
+  background: url("../../../../assets/img/support_feedback_image.png") no-repeat
+    center center;
+  background-size: 80%;
   background-color: rgb(99, 173, 177);
-  background-image: url("../../../../assets/img/support_feedback_image.png");
   cursor: pointer;
 }

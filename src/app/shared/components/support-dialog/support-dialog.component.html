@@ -1,1 +1,12 @@
-<p>support-dialog works!</p>
+<h3 mat-dialog-title>Support dialog</h3>
+<mat-dialog-content class="mat-typography">
+  <h4>[Insert welcoming text instructing customers to type in phone number]</h4>
+  <mat-form-field>
+    <input matInput placeholder="Insert phone number" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>
+    Call Me
+  </button>
+</mat-dialog-actions>

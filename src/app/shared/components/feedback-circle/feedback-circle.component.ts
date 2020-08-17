@@ -10,9 +10,15 @@ import { SupportDialogComponent } from '../support-dialog/support-dialog.compone
 })
 export class FeedbackCircleComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openSupportDialog(): void {
+    const dialogRef = this.dialog.open(SupportDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => console.log(`result of dialog is ${result}`));
   }
 
 }
