@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+import { SupportDialogComponent } from '../support-dialog/support-dialog.component';
 
 @Component({
   selector: 'app-feedback-circle',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackCircleComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
