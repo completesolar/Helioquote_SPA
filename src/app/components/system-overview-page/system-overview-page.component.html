@@ -1,0 +1,58 @@
+<div class="system-overview-page-container">
+  <div class="system-overview-page-container__header">
+    <h1 class="system-overview-page-container__header-title">
+      System overview
+    </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Proposal</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let proposal of proposals" [value]="proposal.value">
+          {{ proposal.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="system-overview-page-container__content">
+    <div class="system-overview-page-container__content-left">
+      <mat-card class="system-overview-page-container__content-map">
+        <img
+          mat-card-image
+          src="../../../assets/img/house_with_solar_panels_aerial.jpg"
+          alt="area-with-solar-map"
+        />
+        <mat-card-content>
+          <p>[first_name, last_name][address, city, state, zip]</p>
+        </mat-card-content>
+      </mat-card>
+      <div class="system-overview-page-container__content-total-savings">
+        <div
+          class="system-overview-page-container__content-total-savings--value"
+        >
+          $XXX,XXX
+        </div>
+        <div
+          class="system-overview-page-container__content-total-savings--title"
+        >
+          Total savings
+        </div>
+      </div>
+    </div>
+    <div class="system-overview-page-container__content-right">
+      <div class="system-overview-page-container__content-details">
+        <ng-container *ngFor="let data of defaultData">
+          <div class="system-overview-page-container__content-details--list">
+            <div class="system-overview-page-container__content-details--title">
+              {{ data.title }}
+            </div>
+            <div class="system-overview-page-container__content-details--value">
+              {{ data.value }}
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <div class="system-overview-page-container__content-graphs">
+        <canvas id="solarProductionEnergyConsumptionGraph"></canvas>
+      </div>
+    </div>
+  </div>
+</div>

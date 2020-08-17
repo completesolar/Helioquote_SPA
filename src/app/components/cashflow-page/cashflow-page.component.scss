@@ -1,0 +1,46 @@
+.cashflow-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+
+  &__header {
+    margin-top: 2rem;
+    text-align: center;
+
+    ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+      .mat-form-field-flex {
+      background-color: transparent;
+    }
+  }
+
+  &__content {
+    width: 90%;
+    margin-bottom: 76px;
+
+    & > table {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    @media all and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 95%;
+      margin-top: 2rem;
+      margin-bottom: 0;
+
+      & > table {
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+
+      &--table,
+      &--graph {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}

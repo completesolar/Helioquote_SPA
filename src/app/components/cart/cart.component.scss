@@ -1,0 +1,71 @@
+.cart-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+
+  &__header {
+    margin-top: 2rem;
+    text-align: center;
+
+    ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+      .mat-form-field-flex {
+      background-color: transparent;
+    }
+  }
+
+  &__content {
+    width: 80%;
+
+    &-button {
+      background-color: rgb(99, 173, 177);
+      color: #ffffff;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      font-size: 22px;
+      padding: 12px 15px;
+      width: 100%;
+      cursor: pointer;
+
+      @media all and (min-width: 1200px) {
+        position: absolute;
+        bottom: 100px;
+        max-width: 768px;
+        left: 30%;
+      }
+    }
+
+    &-title {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-tile {
+      flex: 1 1 50%;
+      margin-bottom: 2rem;
+    }
+
+    &-area {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {
+        flex: 1 1 50%;
+      }
+    }
+  }
+}
+
+.align-right {
+  text-align: right;
+  margin-right: 1rem;
+  flex: 1 1 auto;
+}

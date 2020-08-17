@@ -1,0 +1,35 @@
+<div class="solar-page-container">
+  <div class="solar-page-container__header">
+    <h1 class="solar-page-container__header-title">
+      [Cost of doing nothing]
+    </h1>
+  </div>
+  <div class="solar-page-container__content">
+    <canvas
+      id="utilityBillGraph"
+      class="solar-page-container__content--graph"
+    ></canvas>
+    <div class="solar-page-container__content--info-circles">
+      <app-custom-circle
+        [textInfo]="'$[X.XX] $/kWh'"
+        [subtextInfo]="'Rate'"
+      ></app-custom-circle>
+      <app-custom-circle
+        [textInfo]="'$[XXX.XX]'"
+        [subtextInfo]="'Monthly Average'"
+      ></app-custom-circle>
+      <app-custom-circle
+        [textInfo]="'$[XXX.XX]'"
+        [subtextInfo]="'Bill in 25 years'"
+      ></app-custom-circle>
+      <app-custom-circle
+        [textInfo]="'$[XXX.XXX]'"
+        [subtextInfo]="'25 year lifetime cost'"
+      ></app-custom-circle>
+    </div>
+    <div class="solar-page-container__content--general-info">
+      <span>Utility: [xxxxxxxxxxxxxxxxxx]</span>
+      <span>Rate Schedule: [xxxxxxxxxxxxxxxxxx]</span>
+    </div>
+  </div>
+</div>

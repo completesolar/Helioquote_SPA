@@ -1,0 +1,31 @@
+.custom-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid rgb(255, 224, 10);
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  padding: 15px;
+
+  &__title {
+    font-size: 0.8rem;
+  }
+  &__subtitle {
+    font-size: 0.6rem;
+  }
+  &__title,
+  &__subtitle {
+    text-align: center;
+  }
+
+  @media all and (min-width: 1200px) {
+    height: 150px;
+    width: 150px;
+    &__title,
+    &__subtitle {
+      font-size: initial;
+    }
+  }
+}

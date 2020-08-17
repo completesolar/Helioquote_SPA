@@ -1,0 +1,22 @@
+.solar-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+
+  &__header {
+    &-title {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    min-height: 70vh;
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(116, 116, 116);
+    background: url("../../../assets/img/sunroof_image.jpg") no-repeat center;
+    background-size: cover;
+  }
+}

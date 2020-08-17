@@ -1,0 +1,53 @@
+.energy-overview-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+
+  &__header {
+    margin-top: 2rem;
+    text-align: center;
+
+    ::ng-deep.mat-form-field-type-mat-select:not(.mat-form-field-disabled)
+      .mat-form-field-flex {
+      background-color: transparent;
+    }
+  }
+
+  &__content {
+    width: 80%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 32%;
+      height: 100%;
+      border: 2px solid rgb(99, 173, 177);
+      border-radius: 25px;
+    }
+  }
+}
+
+.solar {
+  color: rgb(99, 173, 177);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.left-text {
+  ::ng-deep.mat-figure {
+    justify-content: flex-start !important;
+  }
+}
+
+.grow-text {
+  font-size: 1rem;
+}

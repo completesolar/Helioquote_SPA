@@ -1,0 +1,60 @@
+<div class="energy-overview-page-container">
+  <div class="energy-overview-page-container__header">
+    <h1 class="energy-overview-page-container__header-title">
+      Energy overview
+    </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Proposal</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let proposal of proposals" [value]="proposal.value">
+          {{ proposal.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="energy-overview-page-container__content">
+    <mat-grid-list cols="3" rowHeight="40px">
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile class="bold">Utility</mat-grid-tile>
+      <mat-grid-tile class="solar">Complete solar</mat-grid-tile>
+    </mat-grid-list>
+    <!-- <mat-accordion multi> -->
+    <ng-container *ngFor="let data of defaultDataForPanels">
+      <mat-grid-list cols="3" rowHeight="40px">
+        <mat-grid-tile class="bold left-text grow-text">
+          {{ data.titlePanel }}
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="3" rowHeight="40px">
+        <ng-container *ngFor="let value of data.values">
+          <mat-grid-tile class="left-text">
+            {{ value.title }}
+          </mat-grid-tile>
+          <mat-grid-tile>{{ value.utilityValue }}</mat-grid-tile>
+          <mat-grid-tile class="solar">
+            {{ value.solarValue }}
+          </mat-grid-tile>
+        </ng-container>
+      </mat-grid-list>
+      <!-- <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title class="bold">
+              {{ data.titlePanel }}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="3" rowHeight="40px">
+            <ng-container *ngFor="let value of data.values">
+              <mat-grid-tile class="ml-2 left-text">
+                {{ value.title }}
+              </mat-grid-tile>
+              <mat-grid-tile>{{ value.utilityValue }}</mat-grid-tile>
+              <mat-grid-tile class="solar">
+                {{ value.solarValue }}
+              </mat-grid-tile>
+            </ng-container>
+          </mat-grid-list>
+        </mat-expansion-panel> -->
+    </ng-container>
+    <!-- </mat-accordion> -->
+  </div>
+</div>

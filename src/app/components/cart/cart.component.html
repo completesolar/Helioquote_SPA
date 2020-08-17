@@ -1,0 +1,228 @@
+<div class="cart-page-container">
+  <div class="cart-page-container__header">
+    <h1 class="cart-page-container__header-title">
+      [title]
+    </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Proposal</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let proposal of proposals" [value]="proposal.value">
+          {{ proposal.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="cart-page-container__content">
+    <div class="cart-page-container__content-list">
+      <div
+        class="cart-page-container__content-tile cart-page-container__content--equipment-details"
+      >
+        <h3 class="cart-page-container__content-title">Equipment details</h3>
+        <div class="cart-page-container__content-area">
+          <div class="cart-page-container__content-area-item">
+            Module
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            # of panels
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Inverter
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            System Nameplate
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            System Size
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Estimated Annual Production
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Estimated $ of Usage
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXXXX]
+          </div>
+        </div>
+      </div>
+      <div
+        class="cart-page-container__content-tile cart-page-container__content--equipment-details"
+      >
+        <h3 class="cart-page-container__content-title">Cost Breakdown</h3>
+        <div class="cart-page-container__content-area">
+          <div class="cart-page-container__content-area-item">
+            Ammount Financed
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XX,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            + Upfront Payment
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Retail Price
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XX,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Available Incentives
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Incentive use (on month XX)
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XX]%
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Net System Cost
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XX,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Return on Investment
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XXX.XX]%
+          </div>
+        </div>
+      </div>
+      <div
+        class="cart-page-container__content-tile cart-page-container__content--equipment-details"
+      >
+        <h3 class="cart-page-container__content-title">Adders</h3>
+        <div class="cart-page-container__content-area">
+          <div class="cart-page-container__content-area-item">
+            Electric Car
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XX,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Heat pump
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Hot tub
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Appliance 1
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Appliance 2
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X,XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Applience 3
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X,XXX]
+          </div>
+        </div>
+      </div>
+      <div
+        class="cart-page-container__content-tile cart-page-container__content--equipment-details"
+      >
+        <h3 class="cart-page-container__content-title">Payment</h3>
+        <div class="cart-page-container__content-area">
+          <div class="cart-page-container__content-area-item">
+            Monthly Solar Payment
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XXX.XX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Monthly Energy Payment (Yr1)
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XXX.XX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Buydown Amount
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[X.XXX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Monthly Solar Payment (beyond buydown)
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            $[XXX.XX]
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            Contract Term
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [XX] years
+          </div>
+
+          <div class="cart-page-container__content-area-item">
+            APR
+          </div>
+          <div class="cart-page-container__content-area-item align-right">
+            [X.XX]%
+          </div>
+        </div>
+      </div>
+    </div>
+    <button mat-flat-button class="cart-page-container__content-button">
+      Agreement & E-Sign
+    </button>
+  </div>
+</div>
