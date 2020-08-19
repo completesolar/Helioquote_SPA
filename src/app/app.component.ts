@@ -16,6 +16,7 @@ export interface ISidebarMenuItem {
 export class AppComponent implements OnInit, OnDestroy {
   title = 'helioquote-spa';
   isWelcomePageShown: boolean;
+  isFinalPage: boolean;
   private destroySubject$ = new Subject();
 
   sidebarMenuItems: ISidebarMenuItem[] = [
@@ -63,6 +64,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.router.events.pipe(takeUntil(this.destroySubject$)).subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.isWelcomePageShown = event.urlAfterRedirects.includes('welcome-page');
+        this.isFinalPage = event.urlAfterRedirects.includes('cart');
       }
     });
   }
@@ -70,5 +72,11 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroySubject$.next();
     this.destroySubject$.complete();
+  }
+
+  navigateToNextState(): void {
+    const indexOfCurrentUrl = this.sidebarMenuItems.findIndex(elem => elem.link === this.router.url);
+    const urlToNavigate = this.sidebarMenuItems[indexOfCurrentUrl + 1].link;
+    this.router.navigateByUrl(urlToNavigate);
   }
 }

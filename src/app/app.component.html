@@ -10,7 +10,7 @@
         </mat-list-item>
       </ng-container>
     </mat-list>
-    <button mat-flat-button>Checkout</button>
+    <button routerLink="/cart" mat-flat-button>Checkout</button>
   </div>
   <div class="layout__main-content">
     <div class="layout__main-content--component">
@@ -37,9 +37,14 @@
           </div>
         </div>
       </ng-container>
-      <div class="layout__footer--next-button">
-        <button mat-flat-button>Next</button>
-      </div>
+      <ng-container *ngIf="!isFinalPage">
+        <div
+          (click)="navigateToNextState()"
+          class="layout__footer--next-button"
+        >
+          <button mat-flat-button>Next</button>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

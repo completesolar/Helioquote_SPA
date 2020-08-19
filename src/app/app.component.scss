@@ -18,8 +18,11 @@ $hq-main-color: rgb(99, 173, 177);
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    max-width: 200px;
+    width: 100%;
 
     & mat-list {
+      width: 100%;
       padding-top: 4rem;
       & mat-list-item {
         color: rgb(17, 17, 17);

@@ -12,8 +12,6 @@ export class CustomCircleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('T1: ', this.textInfo);
-    console.log('T2: ', this.subtextInfo);
   }
 
 }
